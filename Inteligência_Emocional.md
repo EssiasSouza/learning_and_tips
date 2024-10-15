@@ -41,5 +41,6 @@ Estimule o conflito construtivo - Oportunidades para inovação e crescimento.
 - Acresente interesse sobre o que a pessoa está falando (Fazer perguntas abertas que despertam o desejo de falar mais)
 
 O palhaço e o psicanalista (livro)
+
 TED - Empatia, a arte de ver o mundo com os olhos de outra pessoa.
 
