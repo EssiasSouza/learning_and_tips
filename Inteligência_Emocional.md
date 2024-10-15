@@ -30,3 +30,16 @@ Entender a necessidade por trás do conflito - Pergunte as pessoas envolvidas qu
 Comunique-se de forma assertiva - Ser respeitoso. 
 Incentive as pessoas a fazerem pedidos - Encorajar as pessoas a focarem claramente no que quer (como podemos resolver juntos?)
 Estimule o conflito construtivo - Oportunidades para inovação e crescimento.
+
+## Desenvolver a escuta ativa - MÉTODO E.S.C.U.T.A.
+
+- Esteja presente na situação (ser honesto é melhor que fingir que está ouvindo)
+- Suspenda o julgamento e preconceitos
+- Crie conexão (Dê tempo necessário para a pessoa falar até o fim)
+- Uniformize o ambiente (Escolher um lugar tranquilo para falar sem distrações)
+- Tenha consciência do seu estado mental.
+- Acresente interesse sobre o que a pessoa está falando (Fazer perguntas abertas que despertam o desejo de falar mais)
+
+O palhaço e o psicanalista (livro)
+TED - Empatia, a arte de ver o mundo com os olhos de outra pessoa.
+
