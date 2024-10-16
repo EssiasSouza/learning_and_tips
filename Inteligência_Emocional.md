@@ -45,6 +45,7 @@ Comunicação não violenta (Livro)
 Uma historia das emoções humanas (livro)
 Conversas difícieis (livro)
 O Cavaleiro Preso na Armadura (livro)
+Antifrágil Nassim Taleb (livro)
 TED - Empatia, a arte de ver o mundo com os olhos de outra pessoa.
 
 ## TAMP
@@ -162,3 +163,6 @@ Navegação - Analisar os impactos da mudança encontrando soluções
 Gerenciamento - Ajustar continuamente e avaliar o que pode ser mudado durante o processo, pode-se usar um metodo de melhoria.
 Evolução - Identificar os aprendizados durante essa mudança.
 
+### Técnicas para aumentar a adaptabilidade
+
+Carreira profissional é liquida como a água. Carreira proteana que tem a capacidade de se transformar. O profissional liquido tem capacidade de se adaptar com facilidade.
