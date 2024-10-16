@@ -118,5 +118,47 @@ Hora de bater o martelo e transormar a decisão em o quê vai fazer, como vai fa
 
 Esperar os resultados para verificar se da para mudar alguma coisa
 
+## PROCESSO CRIATIVO
 
+Causa de bloqueio criativo:
+- Bloqueio de criatividade pode ser causado por excesso de cobrança
+- Sentir medo de falhar - Não existe fracasso, existe resultado.
+- Hiperfoco - Quando travar busque um pouco de distração.
+
+### Aguçar a criatividade
+
+### SCAMPER
+
+Substituir
+Combinar
+Adaptar
+Modificar
+Propor
+Eliminar - Remover elementos desncessários
+Reorganizar - Para criar algo novo
+
+## TRANSFORME INCERTEZAS EM OPORTUNIDADES
+
+### Como lidar com mudanças inesperadas
+
+`Adaptabilidade` - Se as mudanças te assustam, imagina o terror da estagnação?
+
+Em um momento de uma mudança inesperada permita-se desabar por 1 minuto.
+Hora de agir - Tenta resolver e entender a mudança.
+
+Existem 4 fases da mudança:
+
+- Choque
+- Descrença
+- Abandono de antigos padrões
+- Realização da nova fase.
+
+### MÉTODO CHANGE
+
+Cenário - Compreender a mudança e comunicar até mesmo o óbvio para quem está envolvido
+Habilidades - Será que você tem todos os recursos necessários para enfrentar essa mudança?
+Avaliação - Diagnóstico para detalhar todos os pontos importantes
+Navegação - Analisar os impactos da mudança encontrando soluções
+Gerenciamento - Ajustar continuamente e avaliar o que pode ser mudado durante o processo, pode-se usar um metodo de melhoria.
+Evolução - Identificar os aprendizados durante essa mudança.
 
