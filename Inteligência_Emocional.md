@@ -44,5 +44,11 @@ O palhaço e o psicanalista (livro)
 Comunicação não violenta (Livro)
 Uma historia das emoções humanas (livro)
 Conversas difícieis (livro)
+O Cavaleiro Preso na Armadura (livro)
 TED - Empatia, a arte de ver o mundo com os olhos de outra pessoa.
 
+## TAMP
+- Tirar o elefante da sala - Algo importante que deve ser falado com muita sinceridade.
+- Adulto - Tratar a pessoa como adulto. Passar a informação como deve ser passada.
+- Médico - Converse como se estivesse conversnado com um médico, sem sentimentos passando suas dores.
+- Pergunte - Perguntar se entendeu
