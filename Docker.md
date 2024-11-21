@@ -137,6 +137,70 @@ Para ver as informações sobre o container:
 
 # ARMAZENAMENTO DE DADOS EM CONTAINER
 
+### Comandos 
+
+`docker volume ls` - lista os volumes existentes.
+
+## TIPO BIND - Montando unidade mapeada fora do container.
+
+Em cada conteiner existe o item volume que indica onde os arquivos são salvos. Para acessar a informação de volume digite `docker inspect <nome-do-container>`. Este recurso é interessante porque sempre que for necessário matar o container e subir um novo no lugar, a pasta onde os arquivos são salvos continuam sendo local.
+
+O exemplo a seguir está rodando um conteiner mysql onde os arquivos dentro do container são salvos em /var/lib/mysql
+
+`docker run -e MYSQL_ROOT_PASSWORD=<senha> --name <nome-do-container> -d -p 3306:3306 --volume=/caminho/local:/var/lib/mysql mysql`
+
+Mais um exemplo de uso de BIND é declarando o tipo de armazenamento.
+
+`docker run -dti --mount type=bind,src=/caminho/local,dst=/caminho/do/container <nome-da-imagem>`
+
+`docker run -dti --mount type=bind,src=/caminho/local,dst=/caminho/do/container,ro <nome-da-imagem>` - Neste caso foi usado o `ro` após o destination para indicar que é somente leitura e o container não pode escrever, apenas ler.
+
+
+
+
+
+## TIPO NAMED VOLUMES
+
+Os diretórios são criados dentro do diretório do docker /var/lib/docker/
+
+`docker volume create <nome-do-volume>`
+
+
+Para excluir um volume, este não pode estar sendo usado por nenhum container.
+
+`docker volume rm <nome-do-volume>`
+
+
+Para excluir todos os containers podemos usar o prune.
+
+`docker container prune` (Cuidado)
+
+
+Caso o container possa ser excluído sem parada podemos usar o seguinte comando.
+
+`docker rm -f <nome-do-container>`
+
+
+### limpando todos os volumes
+
+`docker volume prune` (Cuidado)
+
+
+Para referenciar o volume no container podemos usar o comando:
+
+`docker run -v <nome-do-volume>:/diretorio-de-dentro-do-container <nome-da-imagem>`
+
+
+Executando a referência do volume criado usando o `mount`
+
+`docker run -dti --mount type=volume,src=<nome-do-volume>,dst=/caminho/do/container <nome-da-imagem>`
+
+
+Dockerfile volumes
+
+Permite a criação de volumes dentro do arquivo Dockerfile
+
+
 # PROCESSAMENTO, LOGS E REDE COM DOCKER
 
 # DEFINIÇÃO E CRIAÇÃO DE UM DOCKER FILE
