@@ -1,4 +1,4 @@
-Making PostgreSQL dump
+# Making PostgreSQL dump
 
 In terminal run the following command.
 ''''
