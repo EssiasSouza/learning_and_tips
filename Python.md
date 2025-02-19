@@ -1,6 +1,6 @@
 ### Python Websites and systems with Python
 
-The library used to this is `Flet`
+The library used for this is `Flet`
 
 To execute the main function on Flet is necessary to define a main function and call using the line bellow:
 

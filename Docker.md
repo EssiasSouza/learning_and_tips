@@ -64,7 +64,6 @@ Executando o container em backgroud que estará sempre em execução.
 
 `docker run -d <nome-da-imagem>`
 
-
 Abrir o terminal executando alguma aplicação. Neste caso o bash para ter o terminal. (Ao sair do terminal, sai do container, mas continua em execução)
 
 `docker exec -it <os-3-primeiros-digitos-do-ID-do-container> /bin/bash` 
