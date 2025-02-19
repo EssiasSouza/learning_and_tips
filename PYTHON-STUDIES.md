@@ -19,3 +19,21 @@ def main(page):
   button = flet.ElevatedButton("Click to begin"
   page.add(button)
 ````
+
+# DATA MANAGEMENT
+
+## List 
+Is a ordered and mutable collection. Allows duplicated members.
+list = ['car', True, 2, 3.5]
+
+## Tuple
+Is a ordered and unmutable collection. Allows duplicated members.
+tuple = ("car", True, 2, 3.5)
+
+## Dictionary
+Is a ordered and mutable collection. Doesn't allow duplicated members.
+dictionary = {"Name": "Car", "Logic": True, "Number": 2, "OtherNumber": 3.5}
+
+## Set
+Is a non ordered and non indexed collection. It doesn't allow duplicated members.
+set = {"car", True, 2, 3.5}
