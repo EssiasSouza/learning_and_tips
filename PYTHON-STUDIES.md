@@ -1,3 +1,51 @@
+### Python compiler commands
+
+Arquivo `version.txt`
+````
+# UTF-8 encoding
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 2, 1, 0),
+    prodvers=(1, 2, 1, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '040904b0',
+          [
+            StringStruct('CompanyName', 'Corpay'),
+            StringStruct('FileDescription', 'TRX Inspector'),
+            StringStruct('FileVersion', '1.2.1'),
+            StringStruct('InternalName', 'TRX Inspector'),
+            StringStruct('LegalCopyright', '© 2025 Corpay'),
+            StringStruct('OriginalFilename', 'main_trx_inspector.exe'),
+            StringStruct('ProductName', 'TRX Inspector'),
+            StringStruct('ProductVersion', '1.2.1'),
+            StringStruct('Comments', 'Compilado em 2024-03-25')
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [1033, 1200])])
+  ]
+)
+````
+
+
+````
+pyi-makespec --version-file version.txt .\main_trx_inspector.py
+````
+````
+pyinstaller --onefile --windowed --version-file version.txt .\main_trx_inspector.py
+````
+
 ### Python Websites and systems with Python
 
 The library used for this is `Flet`
