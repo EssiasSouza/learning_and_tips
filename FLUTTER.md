@@ -10,3 +10,8 @@ Adiciona o caminho configurado anteriormente nas variáveis de ambiente `C:\src\
 
 ### COMANDOS
 flutter create --projectname cifrin_app_flutter platforms android,ios cifrin_app
+
+
+### NO VS CODE:
+Criar projeto flutter
+flutter: new project
