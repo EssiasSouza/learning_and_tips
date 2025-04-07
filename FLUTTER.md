@@ -16,6 +16,11 @@ Criar projeto já com parâmetros adicionados.
 Limpar os executáveis antes criados pelo flutter para deixar mais leve.
 - flutter clean
 
+PEga as dependências necessárias para o projeto.
+- flutter pub get
+
+Roda o Flutter a partir da linha de comando.
+- flutter run
 ---
 ### NO VS CODE:
 Criar projeto flutter
