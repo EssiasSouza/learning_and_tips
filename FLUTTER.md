@@ -7,11 +7,16 @@ Descompactar em qualquer pasta de preferencia no C:\src\flutter
 
 Adiciona o caminho configurado anteriormente nas variáveis de ambiente `C:\src\flutter\bin`
 
-
+---
 ### COMANDOS
-flutter create --projectname cifrin_app_flutter platforms android,ios cifrin_app
 
+Criar projeto já com parâmetros adicionados.
+- flutter create --projectname cifrin_app_flutter platforms android,ios cifrin_app
 
+Limpar os executáveis antes criados pelo flutter para deixar mais leve.
+- flutter clean
+
+---
 ### NO VS CODE:
 Criar projeto flutter
 flutter: new project
