@@ -1,6 +1,30 @@
-### Python compiler commands
+## Virtual Environment
 
-Arquivo `version.txt`
+To create a virtual environment first is needed to install pythonXX-venv
+
+````
+sudo apt install python3-venv
+python3 -m venv venv
+# Windows
+venv/Scripts/ativate
+# Linux/bash
+source venv/bin/activate
+pip3 instal pack
+pip3 freeze > requirements.txt
+mkdir libs
+pip3 download -r requirements.txt -d libs
+pip install --no-index --find-links=libs -r requirements.txt
+
+# To start again on other machine
+sudo apt install python3-venv
+python3 -m venv venv
+source venv/bin/activate
+pip install --no-index --find-links=libs -r requirements.txt
+````
+
+### Python compiler for Windows commands
+
+File `version.txt`
 ````
 # UTF-8 encoding
 VSVersionInfo(
