@@ -29,6 +29,15 @@ This command compile as pyc but put the pyc file alongisde your py file.
 python3 -m compileall -b application.py
 ````
 
+### Python compiler for Linux, as BIN.
+
+````
+sudo apt install python3-pip build-essential python3-dev
+pip install nuitka --break-system-packages
+sudo apt install patchelf
+python3 -m nuitka --follow-imports --standalone --onefile app_name.py
+````
+
 ### Python compiler for Windows commands
 
 File `version.txt`
