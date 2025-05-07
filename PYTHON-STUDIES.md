@@ -86,6 +86,12 @@ pyi-makespec --version-file version.txt .\main_trx_inspector.py
 pyinstaller --onefile --windowed --version-file version.txt .\main_trx_inspector.py
 ````
 
+# INSTALLATIONS
+
+### Creating .DEB
+
+
+
 ### Python Websites and systems with Python
 
 The library used for this is `Flet`
