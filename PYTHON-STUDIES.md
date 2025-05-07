@@ -22,6 +22,13 @@ source venv/bin/activate
 pip install --no-index --find-links=libs -r requirements.txt
 ````
 
+### Python compiler for Linux
+
+This command compile as pyc but put the pyc file alongisde your py file.
+ ````
+python3 -m compileall -b application.py
+````
+
 ### Python compiler for Windows commands
 
 File `version.txt`
