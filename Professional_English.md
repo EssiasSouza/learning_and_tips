@@ -1,14 +1,6 @@
 ## Job interview
 
-"𝗧𝗲𝗹𝗹 𝗺𝗲 𝗮𝗯𝗼𝘂𝘁 𝗮 𝗱𝗶𝗳𝗳𝗶𝗰𝘂𝗹𝘁 𝗽𝗿𝗼𝗷𝗲𝗰𝘁 𝘆𝗼𝘂 𝘄𝗼𝗿𝗸𝗲𝗱 𝗼𝗻" 
-
-O contexto do projeto e por que ele era complexo
-
-Os desafios específicos que você encontrou no caminho
-
-As decisões que você tomou para resolver cada problema
-
-Os resultados mensuráveis que você conquistou
+# 𝗧𝗲𝗹𝗹 𝗺𝗲 𝗮𝗯𝗼𝘂𝘁 𝗮 𝗱𝗶𝗳𝗳𝗶𝗰𝘂𝗹𝘁 𝗽𝗿𝗼𝗷𝗲𝗰𝘁 𝘆𝗼𝘂 𝘄𝗼𝗿𝗸𝗲𝗱 𝗼𝗻
 
 ### The context of the project and why it was complex
 Well, the project looks like easy first, but the soluctions' infrastrucure was not so easy.
@@ -33,12 +25,32 @@ Second - We reduce the human mistakes
 Third - We was able to automate the rollout process
 And last - We know now how are our machine park and when each machine has received the last version of some application or configuration.
 
+# 𝗪𝗵𝘆 𝗮𝗿𝗲 𝘆𝗼𝘂 𝗹𝗼𝗼𝗸𝗶𝗻𝗴 𝗳𝗼𝗿 𝗻𝗲𝘄 𝗼𝗽𝗽𝗼𝗿𝘁𝘂𝗻𝗶𝘁𝗶𝗲𝘀?
 
+I'm thirsty to grow and I'm looking for a postition that makes me able for that and I believe that I can sum with my current abilities to your company and improve my skills in a new environment.
 
 Looking for Remote Work Opportunities in 2025?
 
+# 𝗛𝗼𝘄 𝗱𝗼 𝘆𝗼𝘂 𝗵𝗮𝗻𝗱𝗹𝗲 𝗰𝗼𝗻𝗳𝗹𝗶𝗰𝘁𝘀 𝗶𝗻 𝘆𝗼𝘂𝗿 𝘁𝗲𝗮𝗺?
 
-📍 kindly hashtag#reshare with your friends it is helpful for others💯
+I'm always looking for an opportunity in every occasion and if I identify a conflict I try to propose some soluction.
+Example: When we began the project that I said before was because we get a crises in a bad configuration on all of our Axway agents. Then between a discussion about of who was the guilty I said, lets try other approach?
+Then a sponsor that was in the discussion aggree me and we just stop to looking for who was to blame.
+And so on until we build the DS, i.e, our own EDI application was create in the middle of an argument.
+
+# 𝗪𝗵𝗮𝘁'𝘀 𝘆𝗼𝘂𝗿 𝗯𝗶𝗴𝗴𝗲𝘀𝘁 𝗮𝗰𝗵𝗶𝗲𝘃𝗲𝗺𝗲𝗻𝘁?
+
+Look, I've had many big deliveries in my career, but the biggest challenge was being part of a team that started a fintech in one of my previous experiences.
+
+We set up a hybrid cloud environment using AWS with more than 200 Linux servers, and I was one of the people responsible for supporting all the partner companies, from the one that provided security services, pen-tests, infrastructure, connection with the Brazilian central bank, which has to follow many compliance requirements.
+
+And the result was the opening of Magnum SCD, a digital bank in Brazil.
+
+# 𝗪𝗵𝘆 𝗱𝗼 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝘄𝗼𝗿𝗸 𝗵𝗲𝗿𝗲?
+
+I want to be able to connect with new technologies, to be able to work more on my skills and share my knowledge.
+
+
 
 1. SimplyHired (simplyhired.com)
 2. Jobspresso (jobspresso.co)
