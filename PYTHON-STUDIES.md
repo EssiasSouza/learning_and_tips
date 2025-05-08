@@ -20,6 +20,9 @@ sudo apt install python3-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install --no-index --find-links=libs -r requirements.txt
+
+# To exit
+deactivate
 ````
 
 ### Python compiler for Linux
