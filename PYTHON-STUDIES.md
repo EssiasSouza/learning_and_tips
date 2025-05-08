@@ -33,7 +33,7 @@ python3 -m compileall -b application.py
 
 ````
 sudo apt install python3-pip build-essential python3-dev
-pip install nuitka --break-system-packages
+pip3 install nuitka --break-system-packages
 sudo apt install patchelf
 python3 -m nuitka --follow-imports --standalone --onefile app_name.py
 ````
