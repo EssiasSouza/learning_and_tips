@@ -20,6 +20,11 @@ my_package/
 │       ├── appStop
 │       ├── appStatus
 │       └── appRestart
+├── usr/
+│   └── lib/
+│       └── systemd/
+│           └── system/
+│               └── app_name.service
 └── var/
     └── DS_SFTP/
         ├── EXECUTABLE.bin
@@ -28,4 +33,61 @@ my_package/
         ├── VERSION
         └── tools/
             └── app_name.service
+````
+
+2. Create the DEBIAN/control File
+
+This file defines package metadata. Example:
+
+````
+Package: package-name
+Version: 1.0.0
+Section: base
+Priority: optional
+Architecture: amd64
+Maintainer: Your Name <you@example.com>
+Description: Description of your application
+````
+
+3. Set Permissions
+
+If you need of especials permissions you can follow this step.
+
+Files in /usr/bin: chmod 777
+
+All files should be owned by root:root (can be set when building the package using fakeroot or by chown if running as root).
+
+You will need to ensure `executable permissions` on your binary as well.
+
+4. (Optional) Add Post-Install Script
+
+If you want the service to be installed and enabled automatically, create a file postinst in the DEBIAN/ folder:
+
+````
+#!/bin/bash
+systemctl daemon-reexec
+systemctl daemon-reload
+systemctl enable app_name.service
+systemctl start app_name.service
+````
+Make this script executable:
+
+````
+chmod 755 my_package/DEBIAN/postinst
+````
+
+5. Build the .deb File
+
+Once the structure is ready, run:
+
+````
+dpkg-deb --build my_package
+````
+This will create a file called my_package.deb.
+
+6. Install the Package
+To test your .deb package:
+
+````
+sudo dpkg -i my_package.deb
 ````
