@@ -4,6 +4,15 @@
 
 ### Step-by-Step Process to Create a .deb Package
 
+- Attention: Dont use special characters or (_) you can separe-your-name-with-
+
+- Second TIP: Create files writing on a Linux PC or after create in your Windows note editor, you can run the command below to convert it to a 
+
+Example:
+````
+dos2unix package-name/DEBIAN/postinst
+````
+
 1. Prepare the Directory Structure
 
 In this example I'm using bin files to create commands to manage the service.
@@ -39,6 +48,8 @@ my_package/
 
 This file defines package metadata. Example:
 
+NOTE: The control file should be terminated with a spaced line
+
 ````
 Package: package-name(The same name used in the package .deb)
 Version: 1.0.0
@@ -47,6 +58,7 @@ Priority: optional
 Architecture: amd64
 Maintainer: Your Name <you@example.com>
 Description: Description of your application
+
 ````
 
 3. Set Permissions
