@@ -40,7 +40,7 @@ my_package/
 This file defines package metadata. Example:
 
 ````
-Package: package-name
+Package: package-name(The same name used in the package .deb)
 Version: 1.0.0
 Section: base
 Priority: optional
