@@ -5,3 +5,73 @@ CTRL+SHIF+P para abrir
 
 Criar projeto flutter
 flutter: new project
+
+
+## REMOTE SSH
+
+### ✅ O que você precisa:
+
+1. **VS Code instalado na sua máquina local**
+2. **Extensão Remote - SSH instalada**
+3. **Acesso SSH ao computador remoto** (com IP ou hostname, usuário e senha ou chave privada)
+
+---
+
+### 🔧 Como configurar:
+
+#### 1. Instalar a extensão "Remote - SSH"
+
+No VS Code:
+
+* Vá para o menu lateral de extensões (ícone de quadrado com 4 blocos)
+* Pesquise por `Remote - SSH`
+* Clique em **Instalar**
+
+#### 2. Abrir o VS Code com acesso ao servidor remoto:
+
+* Pressione `Ctrl+Shift+P` e digite: `Remote-SSH: Connect to Host...`
+* Adicione o host remoto, por exemplo:
+
+  ```
+  essias@192.168.0.100
+  ```
+
+  ou com nome DNS:
+
+  ```
+  essias@meuserver.dyndns.org
+  ```
+
+#### 3. (Opcional) Editar o arquivo de configuração SSH:
+
+Você pode editar manualmente o arquivo `~/.ssh/config` para adicionar o servidor:
+
+```ssh
+Host meu-servidor
+    HostName 192.168.0.100
+    User essias
+    Port 22
+```
+
+Depois, basta se conectar com:
+
+```
+Remote-SSH: Connect to Host... → meu-servidor
+```
+
+---
+
+### 🧠 O que acontece por trás:
+
+O VS Code instala automaticamente um pequeno **server headless** no host remoto. Esse server permite que você edite, rode e depure o código como se estivesse localmente — com suporte a terminal, linting, Git, depuração, etc.
+
+---
+
+### ✅ Funciona com:
+
+* **Linux remoto → Windows ou Linux local**
+* **Raspberry Pi**
+* **WSL (usando `Remote - WSL`)**
+* **Containers (`Remote - Containers`)**
+* **Máquinas virtuais em nuvem (AWS, Azure, etc.)**
+
