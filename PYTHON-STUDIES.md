@@ -60,7 +60,7 @@ def main():
 if __name__ == "__main__":
     main()
 ````
-`%(prog)s` será automaticamente substituído pelo nome do programa (normalmente, o nome do scrip
+`%(prog)s` will be automatically replaced by the application name (usually, the script name that is running)
 
 ### Python compiler for Windows commands
 
