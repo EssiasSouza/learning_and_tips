@@ -41,6 +41,26 @@ sudo apt install patchelf
 python3 -m nuitka --follow-imports --standalone --onefile app_name.py
 ````
 
+**To app show application version create the applications as below***
+
+````
+# app_name.py
+
+import argparse
+
+VERSION = "1.0.0"
+
+def main():
+    parser = argparse.ArgumentParser(description="Minha aplicação")
+    parser.add_argument('--version', action='version', version=f'%(prog)s {VERSION}')
+    args = parser.parse_args()
+
+    print("Application running...")
+
+if __name__ == "__main__":
+    main()
+````
+
 ### Python compiler for Windows commands
 
 File `version.txt`
