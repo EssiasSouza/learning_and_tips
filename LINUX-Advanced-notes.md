@@ -34,8 +34,8 @@ my_package/
 │       └── systemd/
 │           └── system/
 │               └── app_name.service
-└── var/
-    └── DS_SFTP/
+└── etc/
+    └── application/
         ├── EXECUTABLE.bin
         ├── config.json
         ├── README.md
