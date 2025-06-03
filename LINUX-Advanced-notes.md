@@ -80,6 +80,7 @@ If you want the service to be installed and enabled automatically, create a file
 systemctl daemon-reexec
 systemctl daemon-reload
 systemctl enable app_name.service
+printf "enable app_name.service\n" | sudo tee -a /usr/lib/systemd/system-preset/90-systemd.preset
 systemctl start app_name.service
 ````
 Make this script executable:
