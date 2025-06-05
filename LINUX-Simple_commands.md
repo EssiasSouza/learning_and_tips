@@ -143,6 +143,9 @@ arp -a
 # Buscar nome de host
 hostname
 hostname -I        # Só o IP
+
+# Rodar script ou comando em segundo plano
+sudo nohup /script/path.sh > /path/to/save/log$(date +%Y%m).log 2>&1 & disown
 ```
 
 ---
