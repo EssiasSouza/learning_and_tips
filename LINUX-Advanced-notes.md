@@ -104,3 +104,30 @@ To test your .deb package:
 ````
 sudo dpkg -i my_package.deb
 ````
+
+----
+
+### Linux simple script with parameters
+
+Create a shell script as bellow
+
+````
+#!/bin/bash
+
+# Capture the first argument passed to the script
+variable=$1
+
+# Print the value of the variable
+echo "$variable"
+````
+
+**Execute it as bellow**
+
+````
+script.sh 74625
+````
+
+It will print this:
+`74625`
+
+----
