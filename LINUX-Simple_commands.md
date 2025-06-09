@@ -146,8 +146,9 @@ hostname -I        # Só o IP
 
 # Rodar script ou comando em segundo plano
 sudo nohup /script/path.sh > /path/to/save/log$(date +%Y%m).log 2>&1 & disown
+
+# Rodar find e salvar resultado em segundo plano.
+nohup find /caminho/para/buscar/ -type f -name 'PARTE_DO_NOME_DO_ARQUIVO*' > ENCONTRADOS.TXT 2>/dev/null &
 ```
 
----
 
-Se quiser, posso gerar esse conteúdo em um arquivo `.sh`, `.txt` ou `.md` para você levar em pendrive, GitHub ou manter como documentação interna. Deseja isso? Posso incluir observações ou exemplos práticos baseados nas manutenções que você mais faz também.
