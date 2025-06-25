@@ -1,4 +1,4 @@
-### 📁 **Arquivos e diretórios**
+### **Arquivos e diretórios**
 
 ```bash
 # Ler arquivo texto ou JSON
@@ -22,7 +22,7 @@ rm -rf /caminho               # CUIDADO com o -rf
 
 ---
 
-### 🌐 **Rede**
+### **Rede**
 
 ```bash
 # Ver IP e interfaces
@@ -54,7 +54,7 @@ curl -O http://site.com/arquivo.txt
 
 ---
 
-### 🛠️ **Serviços (systemd)**
+### **Serviços (systemd)**
 
 ```bash
 # Ver status do serviço
@@ -75,7 +75,7 @@ systemctl list-units --type=service --state=running
 
 ---
 
-### 🧠 **Uso de sistema (CPU, memória, disco)**
+### **Uso de sistema (CPU, memória, disco)**
 
 ```bash
 top                  # Ver uso de CPU e memória em tempo real
@@ -90,7 +90,7 @@ ps aux | grep nome
 
 ---
 
-### 🔧 **Manutenção e diagnóstico**
+### **Manutenção e diagnóstico**
 
 ```bash
 # Ver dmesg (mensagens de kernel)
@@ -114,7 +114,7 @@ screen /dev/ttyUSB0 9600
 
 ---
 
-### 🔄 **JSON & Webservices**
+### **JSON & Webservices**
 
 ```bash
 # Formatar e ler JSON
@@ -128,7 +128,7 @@ curl -X POST -H "Content-Type: application/json" \
 
 ---
 
-### 💡 Extras úteis
+### **Extras úteis**
 
 ```bash
 # Ver variável de ambiente
@@ -150,5 +150,61 @@ sudo nohup /script/path.sh > /path/to/save/log$(date +%Y%m).log 2>&1 & disown
 # Rodar find e salvar resultado em segundo plano.
 nohup find /caminho/para/buscar/ -type f -name 'PARTE_DO_NOME_DO_ARQUIVO*' > ENCONTRADOS.TXT 2>/dev/null &
 ```
+## SED COMMAND
+---
 
+### 1. **Basic example: Delete lines containing "ERROR". It doesn't save the file**
 
+```bash
+sed '/ERROR/d' file.txt
+```
+
+* This prints the contents of `file.txt`, **excluding** any line that contains `ERROR`.
+
+### 2. **Edit the file in-place (overwrite original)**
+
+```bash
+sed -i '/ERROR/d' file.txt
+```
+
+* This removes all lines containing `ERROR` **and saves the result back** to `file.txt`.
+
+### 3. **Case-insensitive match**
+
+```bash
+sed -i '/error/Id' file.txt
+```
+
+* `I` makes it **case-insensitive**. Will remove lines with `Error`, `ERROR`, `error`, etc.
+
+### 4. **Delete lines containing multiple terms (e.g., ERROR or WARNING)**
+
+```bash
+sed -i '/ERROR\|WARNING/d' file.txt
+```
+
+* Removes any line that contains `ERROR` **or** `WARNING`.
+
+### 5. **Delete lines that match a pattern like an IP address**
+
+```bash
+sed -i '/[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}/d' file.txt
+```
+
+* Removes lines with something that **looks like an IPv4 address**.
+
+### 6. **Remove lines containing the word only as a full word**
+
+```bash
+sed -i '/\<ERROR\>/d' file.txt
+```
+
+* `\<` and `\>` make sure it only removes lines with the **whole word** `ERROR`, not words like `ERROR123`.
+
+### 7. **Remove lines starting with a specific word (e.g., comments)**
+
+```bash
+sed -i '/^#/d' file.txt
+```
+
+* Deletes lines that **start with a hash** `#`, commonly used in config files.
