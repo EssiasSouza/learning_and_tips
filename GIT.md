@@ -20,6 +20,10 @@ git reset --soft HEAD
 ```
 git log --oneline --graph --all
 ```
+### Remove a commit. (The number should be used in order to inform the commit. Run: `git log --oneline` to see a list of commits in one line.)
+```
+git rebase -i HEAD~5
+```
 
 ### WARNING CRLF TO LF
 ---
