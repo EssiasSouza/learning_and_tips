@@ -1,5 +1,29 @@
 # Git tips
 
+## COMMANDS
+
+A list of commands to help in a routine.
+
+### See the commits
+```
+git log
+```
+### List modified files on the latest commit
+```
+git show --name-only
+```
+### Reseting the first commit 
+```
+git reset --soft HEAD 
+```
+### Show a historical with graphics of branches
+```
+git log --oneline --graph --all
+```
+
+### WARNING CRLF TO LF
+---
+
 The warning you're seeing:
 
 warning: in the working copy of 'venv/Lib/site-packages/pycparser/yacctab.py', LF will be replaced by CRLF the next time Git touches it
