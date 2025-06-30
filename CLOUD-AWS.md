@@ -20,3 +20,20 @@ Don't migrate and decomissionate
 ### Refactoring or Re-archtecting
 Remake all project of infrastructure.
 
+## AWS CLI
+
+### To autenticate:
+```
+aws configure
+```
+**Type the credentials**
+```
+AWS Access Key ID [None]: YOUR_KEY_HERER
+AWS Secret Access Key [None]: YOUR_SECRET_KEY
+Default region name [None]: us-east-1      # Or other region, ie: sa-east-1 for SP
+Default output format [None]: json         # Or text, table.
+```
+### Listing a bucket objects
+```
+aws s3 ls s3://nome-do-bucket
+```
