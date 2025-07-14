@@ -104,10 +104,10 @@ VSVersionInfo(
 
 
 ````
-pyi-makespec --version-file version.txt .\main_trx_inspector.py
+pyi-makespec --version-file version.txt .\your_app.py
 ````
 ````
-pyinstaller --onefile --windowed --version-file version.txt .\main_trx_inspector.py
+pyinstaller --onefile --windowed --version-file version.txt .\your_app.py
 ````
 
 # INSTALLATIONS
