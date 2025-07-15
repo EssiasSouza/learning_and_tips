@@ -24,6 +24,11 @@ git log --oneline --graph --all
 ```
 git rebase -i HEAD~5
 ```
+### Reset as repository.
+```
+git fetch --all
+git reset --hard origin/main
+```
 
 ### WARNING CRLF TO LF
 ---
