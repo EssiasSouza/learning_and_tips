@@ -44,6 +44,9 @@ netstat -tulnp        # Também com net-tools
 dig google.com
 nslookup google.com
 
+# Limpar cache DNS
+sudo systemd-resolve --flush-caches
+
 # Ver rota
 traceroute google.com
 
