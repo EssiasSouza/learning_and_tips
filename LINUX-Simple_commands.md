@@ -50,6 +50,10 @@ sudo systemd-resolve --flush-caches
 # Ver rota
 traceroute google.com
 
+# Habilitar ou desabilitar que o NetworkManager escreva o /etc/resolv.conf
+sudo chattr -i /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+
 # Baixar arquivos via rede
 wget http://site.com/arquivo.txt
 curl -O http://site.com/arquivo.txt
