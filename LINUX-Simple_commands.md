@@ -24,7 +24,8 @@ rm -rf /caminho               # CUIDADO com o -rf
 
 ### **Rede**
 
-```bash
+```
+bash
 # Ver IP e interfaces
 ip a
 ifconfig         # Pode precisar instalar: apt install net-tools
@@ -46,6 +47,13 @@ nslookup google.com
 
 # Limpar cache DNS
 sudo systemd-resolve --flush-caches
+
+# Desabilitar IPV6
+# Adicione as linhas abaixo no arquivo /etc/sysctl.conf depois aplique usando o comando sudo sysctl -p:
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+
+sudo sysctl -p
 
 # Ver rota
 traceroute google.com
