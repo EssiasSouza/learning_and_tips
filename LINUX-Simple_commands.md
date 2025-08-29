@@ -55,6 +55,9 @@ net.ipv6.conf.default.disable_ipv6 = 1
 
 sudo sysctl -p
 
+# Renomear uma interface
+sudo ip link set dev eth0 name neweth0
+
 # Ver rota
 traceroute google.com
 
