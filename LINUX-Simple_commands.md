@@ -1,6 +1,6 @@
 ### **Arquivos e diretórios**
 
-```bash
+```
 # Ler arquivo texto ou JSON
 cat /caminho/arquivo.txt
 less /caminho/arquivo.json
@@ -19,6 +19,17 @@ cp origem destino
 mv origem destino
 rm -rf /caminho               # CUIDADO com o -rf
 ```
+---
+
+### **Updates**
+
+```
+# Pos-instalação.
+sudo dnf clean all        # limpa cache de pacotes antigos
+sudo dnf -y update        # aplica todas as atualizações
+sudo reboot               # reinicia para carregar kernel/patches
+```
+
 
 ---
 
@@ -74,7 +85,7 @@ curl -O http://site.com/arquivo.txt
 
 ### **Serviços (systemd)**
 
-```bash
+```
 # Ver status do serviço
 systemctl status nome_do_serviço
 
@@ -95,7 +106,7 @@ systemctl list-units --type=service --state=running
 
 ### **Uso de sistema (CPU, memória, disco)**
 
-```bash
+```
 top                  # Ver uso de CPU e memória em tempo real
 htop                 # Melhorado (instale com apt install htop)
 free -h              # Uso de memória
@@ -110,7 +121,7 @@ ps aux | grep nome
 
 ### **Manutenção e diagnóstico**
 
-```bash
+```
 # Ver dmesg (mensagens de kernel)
 dmesg | tail -n 20
 
@@ -134,7 +145,7 @@ screen /dev/ttyUSB0 9600
 
 ### **JSON & Webservices**
 
-```bash
+```
 # Formatar e ler JSON
 jq . arquivo.json
 
@@ -148,7 +159,7 @@ curl -X POST -H "Content-Type: application/json" \
 
 ### **Extras úteis**
 
-```bash
+```
 # Ver variável de ambiente
 echo $VARIAVEL
 
@@ -173,7 +184,7 @@ nohup find /caminho/para/buscar/ -type f -name 'PARTE_DO_NOME_DO_ARQUIVO*' > ENC
 
 ### 1. **Basic example: Delete lines containing "ERROR". It doesn't save the file**
 
-```bash
+```
 sed '/ERROR/d' file.txt
 ```
 
@@ -181,7 +192,7 @@ sed '/ERROR/d' file.txt
 
 ### 2. **Edit the file in-place (overwrite original)**
 
-```bash
+```
 sed -i '/ERROR/d' file.txt
 ```
 
@@ -189,7 +200,7 @@ sed -i '/ERROR/d' file.txt
 
 ### 3. **Case-insensitive match**
 
-```bash
+```
 sed -i '/error/Id' file.txt
 ```
 
@@ -197,7 +208,7 @@ sed -i '/error/Id' file.txt
 
 ### 4. **Delete lines containing multiple terms (e.g., ERROR or WARNING)**
 
-```bash
+```
 sed -i '/ERROR\|WARNING/d' file.txt
 ```
 
@@ -205,7 +216,7 @@ sed -i '/ERROR\|WARNING/d' file.txt
 
 ### 5. **Delete lines that match a pattern like an IP address**
 
-```bash
+```
 sed -i '/[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}/d' file.txt
 ```
 
@@ -213,7 +224,7 @@ sed -i '/[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}/d' file.txt
 
 ### 6. **Remove lines containing the word only as a full word**
 
-```bash
+```
 sed -i '/\<ERROR\>/d' file.txt
 ```
 
@@ -221,7 +232,7 @@ sed -i '/\<ERROR\>/d' file.txt
 
 ### 7. **Remove lines starting with a specific word (e.g., comments)**
 
-```bash
+```
 sed -i '/^#/d' file.txt
 ```
 
