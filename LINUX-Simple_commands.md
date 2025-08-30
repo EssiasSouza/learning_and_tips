@@ -139,6 +139,15 @@ ls -l /caminho
 
 # Testar leitura serial (se necessário)
 screen /dev/ttyUSB0 9600
+
+# Firewall e SELinux
+sudo dnf -y install firewalld policycoreutils-python-utils
+
+# Monitoramento de performance
+sudo dnf -y install htop iotop sysstat
+
+# Utilitários úteis
+sudo dnf -y install unzip git net-tools inotify-tools
 ```
 
 ---
