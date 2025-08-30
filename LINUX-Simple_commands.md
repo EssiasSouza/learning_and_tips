@@ -79,6 +79,12 @@ sudo chattr +i /etc/resolv.conf
 # Baixar arquivos via rede
 wget http://site.com/arquivo.txt
 curl -O http://site.com/arquivo.txt
+
+sudo nmcli connection reload
+sudo nmcli connection up enp0s3
+
+# Desabilitar nomeação de dispositivos atuais no Grub
+sudo nano /etc/default/grub     #Adicionar no final da linha GRUB_CMDLINE_LINUX= o parâmetro net.ifnames=0 biosdevname=0
 ```
 
 ---
