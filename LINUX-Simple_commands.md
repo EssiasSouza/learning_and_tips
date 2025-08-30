@@ -69,6 +69,9 @@ sudo sysctl -p
 # Renomear uma interface
 sudo ip link set dev eth0 name neweth0'     # Mudança temporária
 
+# Renomear uma interface permanentemente
+
+
 # Ver rota
 traceroute google.com
 
