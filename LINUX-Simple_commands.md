@@ -115,6 +115,7 @@ du -sh *             # Espaço por pasta
 
 # Ver processos com uso de porta, CPU, etc.
 ps aux | grep nome
+
 ```
 
 ---
@@ -148,6 +149,14 @@ sudo dnf -y install htop iotop sysstat
 
 # Utilitários úteis
 sudo dnf -y install unzip git net-tools inotify-tools
+```
+
+---
+### **Segurança**
+
+```
+sudo systemctl enable --now firewalld
+sudo firewall-cmd --state
 ```
 
 ---
