@@ -53,7 +53,7 @@ Número máximo de conexões pendentes na fila de listen().
 
 Ajuda no pico de conexões simultâneas a sockets (útil para bancos de dados).
 
->>>> Como o banco será pequeno (< 5 GB de dados), não faz sentido exagerar em valores (ex.: shared_buffers=8GB etc). Aqui o objetivo é só melhorar latência e estabilidade.
+> Como o banco será pequeno (< 5 GB de dados), não faz sentido exagerar em valores (ex.: shared_buffers=8GB etc). Aqui o objetivo é só melhorar latência e estabilidade.
 
 ## Limits (FDs)
 
@@ -82,7 +82,7 @@ Por padrão, muitos sistemas deixam nofile em 1024 (muito baixo).
 Um banco ativo com centenas/milhares de conexões + arquivos de WAL pode estourar isso.
 Por isso, aumentar para algo como 100k é prática comum de hardening.
 
->>>> Isso garante que PG e Mongo não vão falhar com “Too many open files”.
+> Isso garante que PG e Mongo não vão falhar com “Too many open files”.
 
 ### Resumindo
 
