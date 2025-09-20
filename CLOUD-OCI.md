@@ -1,8 +1,4 @@
-Exatamente, você pode criar **quantos grupos quiser** na OCI. Os grupos **Administrators** e **Developers** são só exemplos comuns — nada te impede de criar um grupo **Finance**, **Auditors**, **DevOps**, **Estagiários** etc. O poder mesmo vem quando você combina **grupos** com **políticas**.
-
-E é aí que entram os níveis de permissão da linguagem de políticas. Bora detalhar bem:
-
----
+# POLÍTICAS
 
 ## 🔒 Ações possíveis nas políticas da OCI IAM
 
@@ -105,6 +101,4 @@ Digamos que você tem um **grupo "Auditors"** e um **grupo "DevOps"**.
 * `use` → manipular recursos, sem criar/apagar.
 * `manage` → controle total.
 
----
 
-Quer que eu monte uma **tabelinha resumida estilo cheat sheet** com esses verbos + exemplos de recursos (VM, bucket, DB) pra você consultar rápido sempre que estiver montando políticas?
