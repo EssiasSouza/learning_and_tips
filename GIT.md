@@ -28,6 +28,7 @@ git rebase -i HEAD~5
 ```
 git fetch --all
 git reset --hard origin/main
+git clean -fd
 ```
 
 ### WARNING CRLF TO LF
