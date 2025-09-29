@@ -84,13 +84,13 @@ VSVersionInfo(
         StringTable(
           '040904b0',
           [
-            StringStruct('CompanyName', 'Corpay'),
-            StringStruct('FileDescription', 'TRX Inspector'),
+            StringStruct('CompanyName', 'Essias Souza'),
+            StringStruct('FileDescription', 'App loko'),
             StringStruct('FileVersion', '1.2.1'),
             StringStruct('InternalName', 'TRX Inspector'),
-            StringStruct('LegalCopyright', '© 2025 Corpay'),
-            StringStruct('OriginalFilename', 'main_trx_inspector.exe'),
-            StringStruct('ProductName', 'TRX Inspector'),
+            StringStruct('LegalCopyright', '© 2025 Essias Souza'),
+            StringStruct('OriginalFilename', 'App loko.exe'),
+            StringStruct('ProductName', 'App loko'),
             StringStruct('ProductVersion', '1.2.1'),
             StringStruct('Comments', 'Compilado em 2024-03-25')
           ]
