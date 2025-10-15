@@ -1,0 +1,1 @@
+Me dê um texto curto em Inglês sobre o tema Infraestrutura de TI. O texto deve ser como uma conversa entre nativos, usando vocabulário natural do dia a dia. Também me dê uma lista de vocabulário-chave para a compreensão do texto, com suas respectivas traduções.
