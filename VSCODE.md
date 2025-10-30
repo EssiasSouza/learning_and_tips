@@ -10,7 +10,7 @@ flutter: new project
 
 - 1 - Abrir o VSCode
 - 2 - Clicar em More abaixo do `Getting start with Coontainer Tools`
-- 3 - Clicar em `Get started with WSL
+- 3 - Clicar em `Get started with WSL`
 - 4 - Clicar no botão `Open the menu`
 - 5 - Clicar em Conect to WSL
 - 6 - Clicar em Go back
