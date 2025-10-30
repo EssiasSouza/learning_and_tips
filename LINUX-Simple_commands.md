@@ -1,3 +1,17 @@
+### **Usuários e grupos**
+
+```
+adduser username
+groupadd username
+
+# Adicionar o usuário ao grupo.
+usermod -g username username
+usermod -aG sudo username
+
+# Reset de senha
+passwd username
+```
+
 ### **Arquivos e diretórios**
 
 ```
