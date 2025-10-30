@@ -6,6 +6,15 @@ CTRL+SHIF+P para abrir
 Criar projeto flutter
 flutter: new project
 
+## RODAR NO WSL
+
+1 - Abrir o VSCode
+2 - Clicar em More abaixo do `Getting start with Coontainer Tools`
+3 - Clicar em `Get started with WSL
+4 - Clicar no botão `Open the menu`
+5 - Clicar em Conect to WSL
+6 - Clicar em Go back
+7 - Clicar em Open folder (O caminho já vai aparecer como /home/user)
 
 ## REMOTE SSH
 
