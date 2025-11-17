@@ -12,7 +12,7 @@ usermod -aG sudo username
 passwd username
 ```
 
-### **Arquivos e diretórios**
+### **Files and Dirs**
 
 ```
 # Ler arquivo texto ou JSON
@@ -42,6 +42,10 @@ rm -rf /caminho               # CUIDADO com o -rf
 sudo dnf clean all        # limpa cache de pacotes antigos
 sudo dnf -y update        # aplica todas as atualizações
 sudo reboot               # reinicia para carregar kernel/patches
+
+# Updating pip of python
+python3 -m pip install --upgrade pip
+
 ```
 
 
