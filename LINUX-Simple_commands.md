@@ -46,6 +46,17 @@ sudo reboot               # reinicia para carregar kernel/patches
 # Updating pip of python
 python3 -m pip install --upgrade pip
 
+# Debian Buster (Debian 10) was moved to Debian Archive
+
+sudo nano /etc/apt/sources.list
+
+deb http://archive.debian.org/debian buster main contrib non-free
+deb-src http://archive.debian.org/debian buster main contrib non-free
+
+deb http://archive.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://archive.debian.org/debian-security buster/updates main contrib non-free
+
+
 ```
 
 
