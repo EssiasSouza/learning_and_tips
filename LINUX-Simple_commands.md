@@ -56,6 +56,7 @@ deb-src http://archive.debian.org/debian buster main contrib non-free
 deb http://archive.debian.org/debian-security buster/updates main contrib non-free
 deb-src http://archive.debian.org/debian-security buster/updates main contrib non-free
 
+sudo apt update
 
 ```
 
