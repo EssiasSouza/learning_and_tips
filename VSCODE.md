@@ -84,3 +84,14 @@ O VS Code instala automaticamente um pequeno **server headless** no host remoto.
 * **Containers (`Remote - Containers`)**
 * **Máquinas virtuais em nuvem (AWS, Azure, etc.)**
 
+
+# ERRORS
+.../venv/Scripts/Activate.ps1"
+& : File C:\Users\essias.souza\OneDrive - Corpay\DEV\DEV-PROD\Automible\venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies  
+at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:3
+
+- To solve:
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
