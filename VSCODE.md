@@ -91,6 +91,10 @@ O VS Code instala automaticamente um pequeno **server headless** no host remoto.
 at https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:3
 
+- To check:
+```
+Get-ExecutionPolicy -List
+```
 - To solve:
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
