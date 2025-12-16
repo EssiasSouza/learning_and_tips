@@ -16,3 +16,7 @@
 
 ## Choosing Icons behavior to show only on the current taskbar
 - Settings > Personalization > Taksbar > Taskbar behavior > When using multiple displays, show my taskbar apps on [Main taskbar and taskbar where window is open]
+
+## EDGE
+### Removing function in Alt-Tab
+- Settings > System > Multitasking > Show tabs from apps when snapping or pressing Alt+Tab > Change the dropdown menu to "Windows only" or "Don't show tabs,"
