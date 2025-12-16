@@ -1,3 +1,16 @@
+## Starting a installation of WSL
+- Check if the BIOS is with Virtualization activated:
+```
+systeminfo | findstr /i "Virtualization"
+# Output:
+# Virtualization Enabled In Firmware: Yes
+```
+- If the virtualization is activated on BIOS but not on Windows run it:
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
+# Once done, restart your computer.
+```
+
 ## Reinstall WSL
 
 ````
