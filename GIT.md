@@ -1,5 +1,12 @@
 # Git tips
 
+## Connecting to an account.
+
+```
+git --version
+
+```
+
 ## COMMANDS
 
 A list of commands to help in a routine.
