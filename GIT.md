@@ -1,11 +1,174 @@
 # Git tips
 
-## Connecting to an account.
+# Git Authentication on Windows Using Git Bash
 
-```
+This guide explains how to authenticate Git on **Windows** after installing Git and opening **Git Bash**. Modern Git authentication is done using **Personal Access Tokens (HTTPS)** or **SSH keys**.
+
+---
+
+## Option 1 — HTTPS Authentication Using a Personal Access Token (Easiest)
+
+### 1. Verify Git Installation
+
+```bash
 git --version
-
 ```
+
+---
+
+### 2. Configure Your Name and Email (Required)
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@email.com"
+```
+
+Check the configuration:
+
+```bash
+git config --global --list
+```
+
+---
+
+### 3. Generate a Personal Access Token (PAT)
+
+**GitHub steps:**
+
+1. Go to **Settings → Developer settings → Personal access tokens**
+2. Click **Generate new token**
+3. Select at least the following scope:
+
+   * `repo`
+4. Generate the token and **copy it** (you will only see it once)
+
+---
+
+### 4. Use the Token on First Push
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
+
+When running:
+
+```bash
+git push
+```
+
+Git will ask for credentials:
+
+* **Username** → your GitHub username
+* **Password** → paste the **Personal Access Token** (not your GitHub password)
+
+✔️ Windows stores the credentials in **Credential Manager**, so you won’t be prompted again.
+
+---
+
+### 5. Remove Stored Credentials (Optional)
+
+```bash
+git config --global --unset credential.helper
+```
+
+Or via Windows:
+
+> Control Panel → Credential Manager → Windows Credentials
+
+---
+
+## Option 2 — SSH Authentication (Recommended for Professional Use)
+
+SSH is the preferred method for DevOps, automation, and corporate environments.
+
+---
+
+### 1. Generate an SSH Key
+
+```bash
+ssh-keygen -t ed25519 -C "youremail@email.com"
+```
+
+Press **Enter** for all prompts (or set a passphrase if desired).
+
+---
+
+### 2. Start the SSH Agent and Add the Key
+
+```bash
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_ed25519
+```
+
+---
+
+### 3. Copy the Public Key
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the entire output (starts with `ssh-ed25519`).
+
+---
+
+### 4. Add the SSH Key to GitHub
+
+GitHub:
+
+> Settings → SSH and GPG Keys → New SSH Key
+
+Paste the public key and save.
+
+---
+
+### 5. Test the SSH Connection
+
+```bash
+ssh -T git@github.com
+```
+
+Expected response:
+
+```text
+Hi your-username! You've successfully authenticated.
+```
+
+---
+
+### 6. Clone the Repository Using SSH
+
+```bash
+git clone git@github.com:your-username/your-repository.git
+```
+
+✔️ Git will no longer request passwords or tokens.
+
+---
+
+## Which Method Should You Choose?
+
+| Scenario                | Recommended Method |
+| ----------------------- | ------------------ |
+| Quick personal projects | HTTPS + Token      |
+| Work, automation, CI/CD | SSH                |
+| Multiple repositories   | SSH                |
+| Higher security         | SSH                |
+
+---
+
+## Common Mistakes
+
+* ❌ Trying to use your GitHub account password
+* ❌ Mixing HTTPS and SSH URLs for the same repository
+* ❌ Forgetting to configure `user.name` and `user.email`
+
+---
+
+**End of document**
+
 
 ## COMMANDS
 
