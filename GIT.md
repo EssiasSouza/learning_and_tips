@@ -306,3 +306,105 @@ git config --global --get core.autocrlf
 | Linux/macOS | `input`                 | LF                             | LF                |
 
 
+## How to Use `.gitignore`: Subfolders and Wildcards Explained
+
+The `.gitignore` file tells Git which files and directories should not be tracked in a repository. This is especially useful for ignoring build artifacts, temporary files, local configuration, logs, and other files that should not be versioned.
+
+The `.gitignore` file must be placed at the root of the repository (or inside subdirectories if you want rules scoped to those paths). Git evaluates the rules from top to bottom, and more specific rules override generic ones.
+
+---
+
+### Basic Rules
+
+Each line in a `.gitignore` file represents a pattern:
+
+* A blank line is ignored.
+* Lines starting with `#` are comments.
+* Patterns can match files or directories.
+* A trailing `/` indicates a directory.
+* Rules apply recursively unless scoped to a specific path.
+* An exclamation mark `!` negates a rule (re-includes a previously ignored file).
+
+---
+
+### Using Subfolders
+
+You can target specific folders by prefixing the path:
+
+* `logs/` ignores the `logs` directory everywhere.
+* `/logs/` ignores only the `logs` directory at the repository root.
+* `src/logs/` ignores `logs` only inside `src`.
+
+Paths are always relative to the location of the `.gitignore` file.
+
+---
+
+### Using Wildcards
+
+Git supports several wildcard patterns:
+
+* `*` matches any number of characters except `/`
+* `**` matches any number of directories
+* `?` matches a single character
+* `[a-z]` matches a range of characters
+
+These allow you to ignore files by extension, name pattern, or directory depth.
+
+---
+
+### Complete Example Covering All Ignore Patterns
+
+Below is a single `.gitignore` example that demonstrates all common ways to ignore files and directories, including root rules, subfolders, wildcards, ranges, and negation:
+
+```
+# Ignore all log files anywhere
+*.log
+
+# Ignore all temporary files ending with ~
+*~
+
+# Ignore all files starting with "temp"
+temp*
+
+# Ignore all .env files in any directory
+**/.env
+
+# Ignore node_modules in any location
+node_modules/
+
+# Ignore build directories only at the root
+/build/
+
+# Ignore dist directories in any subfolder
+**/dist/
+
+# Ignore all .txt files in docs
+docs/*.txt
+
+# Ignore all .txt files recursively inside docs
+docs/**/*.txt
+
+# Ignore files with a single-character extension like .a, .b, .c
+*.[a-z]
+
+# Ignore cache directories inside any module
+modules/**/cache/
+
+# Ignore everything inside logs
+logs/**
+
+# But keep a specific log file
+!logs/important.log
+```
+
+---
+
+### Important Notes
+
+* Files already tracked by Git will not be ignored until they are removed from the index.
+* To stop tracking a file that is already committed, you must remove it explicitly using Git commands.
+* Always review `.gitignore` rules carefully, as overly broad patterns may hide important files.
+
+Using `.gitignore` correctly helps keep your repository clean, portable, and focused only on what truly matters for version control.
+
+
