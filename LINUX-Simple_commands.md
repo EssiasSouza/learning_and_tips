@@ -139,6 +139,9 @@ systemctl disable nome_do_serviço
 
 # Ver serviços em execução
 systemctl list-units --type=service --state=running
+
+# Force Reboot
+sudo shutdown -r now --force
 ```
 
 ---
