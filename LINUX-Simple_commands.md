@@ -297,3 +297,46 @@ sed -i '/^#/d' file.txt
 ```
 
 * Deletes lines that **start with a hash** `#`, commonly used in config files.
+
+# Samba and OpenLDAP
+
+sudo apt install slapd ldap-utils samba smbclient -y
+sudo dpkg-reconfigure slapd
+ldapsearch -x -LLL -H ldap:/// -s base namingContexts
+
+nano base.ldif
+```
+dn: ou=people,dc=essias,dc=com,dc=br
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=essias,dc=com,dc=br
+objectClass: organizationalUnit
+ou: groups
+```
+### Import base.ldif to LDAP
+```
+ldapadd -x -D cn=admin,dc=essias,dc=com,dc=br -W -f base.ldif
+```
+### Check the importation success
+```
+ldapsearch -x -LLL -H ldap:/// -b dc=essias,dc=com,dc=br
+```
+
+### Setting up Samba file
+```
+[global]
+   workgroup = ESSIAS
+   security = user
+   passdb backend = ldapsam:ldap://127.0.0.1
+   ldap suffix = dc=essias,dc=com,dc=br
+   ldap user suffix = ou=people
+   ldap group suffix = ou=groups
+   ldap admin dn = cn=admin,dc=essias,dc=com,dc=br
+```
+
+### After that
+```
+sudo smbpasswd -w LDAP_PASSWORD_ADMIN
+sudo systemctl restart smbd
+```
