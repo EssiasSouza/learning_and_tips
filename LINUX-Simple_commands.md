@@ -118,6 +118,9 @@ sudo nmcli connection up enp0s3
 
 # Desabilitar nomeação de dispositivos atuais no Grub
 sudo nano /etc/default/grub     #Adicionar no final da linha GRUB_CMDLINE_LINUX= o parâmetro net.ifnames=0 biosdevname=0
+
+# Flush IPV6
+sudo ip -6 addr flush dev enp2s0
 ```
 
 ---
