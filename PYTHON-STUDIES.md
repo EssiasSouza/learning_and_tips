@@ -24,7 +24,22 @@ pip install --no-index --find-links=libs -r requirements.txt
 # To exit
 deactivate
 ````
-
+### Create a file into /.vscode/ to run in VS CODE.
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: App (venv)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/main_app.py",
+      "console": "integratedTerminal",
+      "python": "${workspaceFolder}/venv/Scripts/python.exe"
+    }
+  ]
+}
+```
 ### Python compiler for Linux
 
 This command compile as pyc but put the pyc file alongisde your py file.
