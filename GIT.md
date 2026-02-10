@@ -200,6 +200,14 @@ git fetch --all
 git reset --hard origin/main
 git clean -fd
 ```
+### Branches
+```
+git branch # See branches
+git checkout <branch name> # Changes branch
+git merge <branch from> # You need to choose the branch that will receive the new branch
+git branch -D local_branch_name
+git push <remote_name> --delete <branch_name>
+```
 
 ### WARNING CRLF TO LF
 ---
