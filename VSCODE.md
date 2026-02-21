@@ -1,3 +1,20 @@
+### TIPS
+
+To deactivate PowerShall terminal command suggestions
+```
+Set-PSReadLineOption -PredictionSource None
+```
+
+Set-PSReadLineOption -PredictionSource History
+```
+Set-PSReadLineOption -PredictionSource None
+```
+
+Extra: If you wanna keep, but remove "ghost" mode (inline gray text)
+```
+Set-PSReadLineOption -PredictionViewStyle ListView
+```
+
 ### ATALHOS
 
 Abrir command palet:
