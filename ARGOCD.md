@@ -22,26 +22,19 @@ chmod +x kubectl
 ```
 sudo mv kubectl /usr/local/bin
 ```
-6. Installing ArgoCD CLI
+6. Looking for ArgoCD CLI version
 ```
-ARGOCD_VERION=$(curl --silent "https://github.com/argoproj/argo-cd/releases/latest/" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
+ARGOCD_VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
 echo $ARGOCD.VERSION
 ```
-
----
-
-###
-
-
+7. Downlaoding ArgoCD CLI
 ```
+curl -sSL -o /tmp/argocd-${ARGOCD_VERSION} https://github.com/argoproj/argo-d/releases/download/${ARGOCD_VERSION}/argocd-linux-amd64
 ```
-
----
-
-###
-
-
+8. Giving executable permission
 ```
+chmod +x /tmp/argocd-${ARGOCD_VERSION}
+sudo mv /tmp/argocd-${ARGOCD_VERSION} /usr/local/bin/argocd
 ```
 
 ---
