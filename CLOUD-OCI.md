@@ -101,4 +101,10 @@ Digamos que você tem um **grupo "Auditors"** e um **grupo "DevOps"**.
 * `use` → manipular recursos, sem criar/apagar.
 * `manage` → controle total.
 
+# TERMINAL COMMANDS
 
+```
+oci mysql db-system update \
+--db-system-id <OCID_DO_DB_SYSTEM> \
+--deletion-policy '{"isDeleteProtected": false}'
+```
