@@ -343,3 +343,31 @@ ldapsearch -x -LLL -H ldap:/// -b dc=essias,dc=com,dc=br
 sudo smbpasswd -w LDAP_PASSWORD_ADMIN
 sudo systemctl restart smbd
 ```
+
+### Firewall UFW
+
+1. Installing
+```
+sudo apt install ufw -y
+```
+2. Enable or disable incoming and outgoing
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
+3. Allowing ports
+```
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+```
+4. Enabling UFW
+```
+sudo ufw enable
+# or
+sudo ufw --force enable
+```
+5. Checking status
+```
+sudo ufw status verbose
+```
