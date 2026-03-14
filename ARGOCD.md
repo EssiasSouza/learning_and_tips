@@ -29,31 +29,55 @@ echo $ARGOCD.VERSION
 ```
 7. Downlaoding ArgoCD CLI
 ```
-curl -sSL -o /tmp/argocd-${ARGOCD_VERSION} https://github.com/argoproj/argo-d/releases/download/${ARGOCD_VERSION}/argocd-linux-amd64
+curl -sSL -o argocd \
+https://github.com/argoproj/argo-cd/releases/download/${ARGOCD_VERSION}/argocd-linux-amd64
 ```
 8. Giving executable permission
 ```
-chmod +x /tmp/argocd-${ARGOCD_VERSION}
-sudo mv /tmp/argocd-${ARGOCD_VERSION} /usr/local/bin/argocd
+chmod +x argocd
+sudo mv argocd /usr/local/bin/argocd
+```
+9. Create Kube Config
+```
+export KUBECONFIG=$HOME/.kube/config
+mkdir $HOME/.kube
+touch $KUBECONFIG
 ```
 
----
+10. Installing Podman
+```
+sudo apt update
+sudo apt install podman -y
+```
 
+11. Starting Podman socket becaus it is deamonless
+```
+systemctl --user start podman.socket
+```
+12. 
+```
+sudo vi /etc/sudoers
 
-###
-
-
+# Add a last line this content below.
+ubuntu ALL=(ALL) NOPASSWD: /usr/bin/podman
+esc > : > x! > enter
 ```
 
 ```
-
----
-
-###
-
-
+minikube start --driver=podman
+minikube start --driver=podman
 ```
 
 ```
+```
 
----
+```
+```
+
+```
+```
+
+```
+```
+
+
