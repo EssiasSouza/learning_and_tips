@@ -54,7 +54,7 @@ sudo apt install podman -y
 ```
 systemctl --user start podman.socket
 ```
-12. 
+12. Adding the podman to run as sudo
 ```
 sudo vi /etc/sudoers
 
@@ -62,20 +62,74 @@ sudo vi /etc/sudoers
 ubuntu ALL=(ALL) NOPASSWD: /usr/bin/podman
 esc > : > x! > enter
 ```
-
+13. Starting minikube
 ```
 minikube start --driver=podman
-minikube start --driver=podman
+minikube status
 ```
+14. Starting a cluster
+```
+minikube addons enable ingress
+kubectl get nodes
+kubectl get pods -A
+```
+15. Addinng auto-complete to kubectl
+```
+vi .bashrc
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'source <(alias k=kubectl)' >>~/.bashrc
+echo 'source <(complete -F __start_kubectl k)' >>~/.bashrc
+source .bashrc
+```
+16. Checking Cluster
+```
+kubectl get nodes
+kubectl get namespaces
+```
+17. Creating argocd namespace
+```
+kubectl create namespace argocd
+```
+
+18. Installing manifesto argocd
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl get pods -n argocd
+kubectl get pods -n argocd -w
+watch -n 1 kubectl get pods -n argocd
+```
+
+
 
 ```
 ```
 
-```
-```
+
 
 ```
 ```
+
+
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+
+```
+```
+
+
+```
+```
+
+
+```
+```
+
+
+```
+```
+
 
 ```
 ```
