@@ -130,8 +130,28 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 ```
 
+# Solving problems
 
+If there is any error to download images you can follow these steps.
+
+1. Enter into node to test inside.
 ```
+minikube ssh
+```
+2. Run a test
+```
+curl https://registry.k8s.io
+```
+3. If the curl can't access the page try changing /etc/resolv.conf
+```
+sudo vi /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.1.1
+```
+4. Restart cluster
+```
+minikube delete
+minikube start --driver=podman
 ```
 
 
