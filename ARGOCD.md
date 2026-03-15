@@ -25,7 +25,7 @@ sudo mv kubectl /usr/local/bin
 6. Looking for ArgoCD CLI version
 ```
 ARGOCD_VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
-echo $ARGOCD.VERSION
+echo $ARGOCD_VERSION
 ```
 7. Downlaoding ArgoCD CLI
 ```
