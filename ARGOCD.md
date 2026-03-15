@@ -98,37 +98,105 @@ kubectl get pods -n argocd
 kubectl get pods -n argocd -w
 watch -n 1 kubectl get pods -n argocd
 ```
-
-
-
-```
-```
-
-
-
-```
-```
-
-
+19. Creating a portforward
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
+kubectl port-forward svc/argocd-server -n argocd 8080:443 &
+kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
+```
+20. Getting secret to discover the ArgoCD password
+```
+kubectl get -n argocd
+kubectl get -n argocd secrets argocd-initial-admin-secret
+kubectl get -n argocd secrets argocd-initial-admin-secret -o json
+```
+21. Copy value of "password":
+22. Run echo to see the password
+```
+echo <copied_password_value> | base64 -d
+```
+Simplfiying steps 20, 21 and 22
+```
+kubectl get -n argocd secrets argocd-initial-admin-secret -o json \
+| jq -r '.data.password' \
+| base64 -d
+```
+or...
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+23. Logging on the CLI
+```
+argocd login localhost:8080 \
+--username admin \
+--password <ARGOCD PASSWORD> \
+--insecure
+```
+24. Checking if login is ok.
+```
+argocd version
+```
+25. Listing configured clusters on ArgoCD
+```
+argocd cluster list
+```
+---
+### CREATING A SSH PAIR OF KEYS
+```
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/argocd_rsa
+```
+1. Edit .bashrc adding content below.
+
+```
+eval "$(ssh-agent -s)"
+source .bashrc
+```
+
+2. Adding this key to the agent
+```
+ssh-add ~/.ssh/argocd_rsa
+```
+3. Copy your Public Key to past on your GitHub
+   - Enter your GitHub Account
+   - User Settings
+   - SSH and GPG keys
+   - New SSH Keys
+```
+cat .ssh/argocd_rsa.pub ssh-rsa Public Key
+```
+4. Test your connection on GitHub
+```
+ssh -T git@github.com
+```
+
+```
+```
+
+```
+```
+
+```
+```
+
+```
+```
+
+```
+```
+
+```
 ```
 
 
-```
-```
 
 
-```
-```
 
 
-```
-```
 
 
-```
-```
+
+
+
 
 # Solving problems
 
