@@ -200,6 +200,10 @@ git fetch --all
 git reset --hard origin/main
 git clean -fd
 ```
+### Removing all commits
+```
+git reset --hard HEAD~3
+```
 ### Branches
 ```
 git branch # See branches
