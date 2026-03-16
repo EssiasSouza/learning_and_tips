@@ -168,21 +168,136 @@ cat .ssh/argocd_rsa.pub ssh-rsa Public Key
 ```
 ssh -T git@github.com
 ```
+5. Create locally a new branch 
+```
+git checkout -b argocd
+```
+6. Creating needed files
+```
+mkdir -p k8s-manifests && touch k8s-manifests/{backend-deployment.yaml,backend-service.yaml,frontend-deployment.yaml,frontend-service.yaml,ingress.yaml}
+```
+- backend-deployment.yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: rafaelvzago/fortune-backend-rust:1.0
+        ports:
+        - containerPort: 8080
+        env:
+        - name: API_URL
+          value: "https://api.adviceslip.com/advice"
+```
+- backend-service.yaml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: default
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+```
+- frontend-deployment.yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: rafaelvzago/fortune-frontend:1.0
+        ports:
+        - containerPort: 80
+```
+- frontend-service.yaml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+```
+- ingress.yaml
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fortune-cookie-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: fortune-cookie.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+```
 
 ```
 ```
 
-```
-```
+
 
 ```
 ```
-
 ```
 ```
 
+
+
 ```
 ```
+```
+```
+
+
 
 ```
 ```
