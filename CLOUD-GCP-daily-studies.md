@@ -4,11 +4,11 @@
 
 ## WEEK 1 - Foundations (Core Concepts + First Resources)
 
-### Day 1 - GCP Overview
+### Day 1 (26/03/18) - GCP Overview
 
-**Study**
+### What is GCP
 
-* What is GCP
+GCP (Google Cloud Platform) is a cloud service provided by Google. 
 * Global infrastructure (regions, zones)
 
 **Hands-on**
