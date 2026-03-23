@@ -28,6 +28,10 @@ git init
 
 ### Adding more accounts
 ```
+gcloud auth login
+```
+or
+```
 git init
 ```
 
@@ -44,3 +48,23 @@ To see logged account:
 ```
 gcloud auth list
 ```
+
+---
+## Setting a project
+
+Se all projects
+```
+gcloud projects list
+gcloud config set project <PROJECT ID>
+```
+
+# List of commands to take
+
+```
+gcloud compute disks list
+gcloud compute disks describe disk-1 --zone=us-central1-a
+gcloud compute disks delete disk-1 --zone=us-central1-a
+gcloud compute snapshots create snap-disk-1 --source-disk=disk-1 --source-disk-zone=us-central1-a
+gcloud compute snapshots list
+```
+
