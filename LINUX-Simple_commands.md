@@ -380,3 +380,9 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 sudo systemctl status ssh
 ```
+# RHEL - Red Hat Enterprise Linux
+
+### Installing firewall
+```
+sudo dnf install firewalld
+```
