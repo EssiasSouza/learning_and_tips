@@ -27,6 +27,22 @@ MINIKUBE
 - Run minikube-installer.exe
 - Check if path has `C:\Program Files\Kubernetes\Minikube`
 
+## Resumo das responsabilidades dos componentes que você já estudou
+
+| Componente         | Função                     |
+| ------------------ | -------------------------- |
+| API Server         | Porta de entrada           |
+| Scheduler          | Escolhe o Node             |
+| Controller Manager | Mantém estado desejado     |
+| kubelet            | Garante containers rodando |
+| **kube-proxy**     | Rede e Services            |
+| Container Runtime  | Cria containers            |
+| Pod                | Agrupa containers          |
+| Node               | Máquina                    |
+| Cluster            | Conjunto de tudo           |
+
+
+
 ## Studies notes
 
 Kubernetes uses YAML file to run as manifests. To know more about and how to use see documentation on [https://yaml.org/spec/1.2.2/](https://yaml.org/spec/1.2.2/)
@@ -49,4 +65,21 @@ O Kubernetes é dividido em `node master` e `node worker` (node cluster)
  - **node worker** é onde a aplicação será executada e é formado por:
   - pod: representa a menor unidade dos objetos do Kubernetes.
   - Kubelet: é o agente responsável por garantir a execução dos containers dentro de um pod e ele é executado um em cada node.
-    
+  - Kube-proxy: é o agente que trabalha na camada de rede decidindo para qual pod ele envia os pacotes de acordo com o destino justamente porque os containers trocam os ips então ele conhece a estrutura.
+  - container runtime: é o mecanismo de execução dos nossos containers. Exemplo Conteinerd, Docker ou o Podman.
+
+## Kubernetes cluster
+```
+Kubernetes cluster
+│
+├── Control plane
+│     ├── etcd
+│     ├── kube-apiserver
+│     ├── kube-scheduler
+│     └── kube-controller-manager
+│
+├── Compute machines
+│     ├── kubelet
+│     ├── kube-proxy
+│     └── Container runtime > Pods > Containers 
+```
