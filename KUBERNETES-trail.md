@@ -55,18 +55,18 @@ To see more about the projects that are related with Kubernetes see on [https://
 
 ### Kubernetes Foundation Notes
 
-O Kubernetes é dividido em `node master` e `node worker` (node cluster)
+The Kubernetes is divided in `node master` e `node worker` (node cluster)
 
- - **node master** define e mantem o estado desejado do worker e é formado por:
-  - kube-apiserver: front-end do plano de controle que processa as solicitações internas e externas
-  - kube-schedule: essa é a camada que gerencia a integridade do ambiente derrubando e subindo conatiners.
-  - kube-control-manager: esse é um gerenciador que usa vários tipos de controladores para manter o ambiente como você define, fazendo uma avaliação em loop constante buscando diferenças entre o ambiente atual e o que foi definido. Se um pod cair ele logo sobe outro.
-  - etcd: é um banco de dados distribuído que armazena configurações de estado do cluster no padrão chave-valor.
- - **node worker** é onde a aplicação será executada e é formado por:
-  - pod: representa a menor unidade dos objetos do Kubernetes.
-  - Kubelet: é o agente responsável por garantir a execução dos containers dentro de um pod e ele é executado um em cada node.
-  - Kube-proxy: é o agente que trabalha na camada de rede decidindo para qual pod ele envia os pacotes de acordo com o destino justamente porque os containers trocam os ips então ele conhece a estrutura.
-  - container runtime: é o mecanismo de execução dos nossos containers. Exemplo Conteinerd, Docker ou o Podman.
+ - **node master** defines and keep the desired stat from worker and is composed by:
+  - kube-apiserver: front-end of the control plane that process the interneal an external requests
+  - kube-schedule: Is one layer that manage the environment integrity terminating and runing new containers
+  - kube-control-manager: this is a manager that uses several kinds of controller to keep the environment as you define, making a checking-up in a constant loop lookinh for differences betwen the actual environment and what was defined. If a pod is crashed it soon rise other one.
+  - etcd: is a distributed database that stores the cluster state configuration in a key-value format.
+ - worker node is where the application will run and it is composed of:
+  - Pod: represents the smallest unit of Kubernetes objects.
+  - Kubelet: is the agent responsible for ensuring that containers are running inside a Pod, and it runs on each node.
+  - Kube-proxy: is the agent that operates at the network layer, deciding to which Pod it sends packets according to the destination, mainly because containers change IPs, so it knows the cluster networking structure.
+  - Container runtime: is the execution engine for our containers, such as Containerd, Docker, or Podman.
 
 ## Kubernetes cluster
 ```
@@ -82,4 +82,26 @@ Kubernetes cluster
 │     ├── kubelet
 │     ├── kube-proxy
 │     └── Container runtime > Pods > Containers 
+```
+
+### Runing tools
+
+ - Deployment: is a creator of replicasets that ensures the pods are created as configured. This is on the strategy level, looking at configuration of your need in your environment
+ - Replicaset: is a configuration to run the environment. This is on the quantity level, ensuring the quantity of pods need to be runing.
+ - kubelet: is the runner in the last part of structure, in fact running the pods.
+
+### 
+
+### commands
+
+```
+minikube start
+kubectl cluster info
+```
+
+**error hyper-v vs virtual-box**
+
+```
+minikube delete
+minikube start --driver=hyperv
 ```
