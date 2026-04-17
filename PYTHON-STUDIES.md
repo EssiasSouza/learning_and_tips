@@ -1,3 +1,15 @@
+## Errors VENV
+
+If there are not imported well, maybe the interpreter that is wrong.
+
+1. Ctrl + Shift + P
+2. Type: Python: Select Interpreter
+3. Choose this path:
+
+```
+.\venv\Scripts\python.exe
+```
+
 ## Virtual Environment
 
 To create a virtual environment first is needed to install pythonXX-venv
